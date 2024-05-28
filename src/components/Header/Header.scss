@@ -19,6 +19,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+
+  &__search {
+    width: 100%;
+  }
 
   &__input {
     background-image: url("../../assets/icons/search.svg");
@@ -31,5 +36,16 @@
     padding: 0.75rem;
     padding-left: 2.25rem;
     height: 2.25rem;
+    width: 100%;
+  }
+
+  &__upload {
+    position: relative;
+  }
+
+  &__upload-icon {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 25%;
   }
 }

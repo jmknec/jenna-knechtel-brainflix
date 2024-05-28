@@ -1,0 +1,14 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.main-nav__upload {
+  @include mobile-labels;
+  background-color: $brainflix-blue;
+  color: $white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  width: 100%;
+}

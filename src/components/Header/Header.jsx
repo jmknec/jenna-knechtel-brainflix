@@ -1,7 +1,8 @@
 import "./Header.scss";
 import Avatar from "../Avatar/Avatar";
-// import Search from "../../assets/icons/search.svg";
-// import Upload from "../../assets/icons/upload.svg";
+import Image from "../../assets/images/Mohan-muruge.jpg";
+import Button from "../Button/Button";
+import Upload from "../../assets/icons/upload.svg";
 
 function Header(props) {
   return (
@@ -26,11 +27,17 @@ function Header(props) {
         </search>
         <Avatar
           className="main-nav__user"
-          src="src/assets/images/Mohan-muruge.jpg"
+          image={Image}
           alt="User profile picture"
         />
       </div>
-      <button className="main-nav__upload">Upload</button>
+      <Button
+        className="main-nav__upload"
+        btnLabel="Upload"
+        icon={Upload}
+        iconClass="main-nav__upload-icon"
+        altText="up arrow above horizontal line"
+      />
     </header>
   );
 }
