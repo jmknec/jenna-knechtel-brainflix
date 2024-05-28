@@ -1,0 +1,33 @@
+@use "./partials/typography" as *;
+@use "./partials/variables" as *;
+
+@mixin buttons {
+  background-color: $brainflix-blue;
+  color: $white;
+  border-radius: 4px;
+  height: 2.5rem;
+  min-width: 9.375rem;
+}
+
+@mixin divider {
+  border-bottom: 1px solid $mercury;
+}
+
+@mixin thumbnails {
+  background-color: $mercury;
+  border-radius: 4px;
+}
+
+@mixin mobile-avatar {
+  background-color: $mercury;
+  border-radius: 50%;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+@mixin avatar {
+  background-color: $mercury;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}

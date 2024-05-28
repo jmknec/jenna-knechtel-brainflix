@@ -1,0 +1,90 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+$primary-font: "Avenir";
+
+//all size screens
+@mixin section-headers {
+  font-family: $primary-font;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+//mobile
+@mixin mobile-titles {
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@mixin mobile-subheaders {
+  font-family: $primary-font;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+@mixin mobile-content {
+  font-family: $primary-font;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin mobile-labels {
+  font-family: $primary-font;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+//larger screens
+@mixin large-screen-titles {
+  font-family: $primary-font;
+  font-size: 2.063rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin large-screen-subheaders {
+  font-family: $primary-font;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+
+@mixin large-screen-content {
+  font-family: $primary-font;
+  font-size: 0.875rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+}
+
+@mixin large-screen-labels {
+  font-family: $primary-font;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
