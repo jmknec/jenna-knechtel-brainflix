@@ -1,8 +1,8 @@
 import videos from "../../data/video-details.json";
 import Video from "../Video/Video";
-import "./VideoList.scss";
+import "./NextVideos.scss";
 
-function VideoList() {
+function NextVideos() {
   return (
     <aside className="video-list">
       <h2 className="video-list__heading">Next Videos</h2>
@@ -22,4 +22,4 @@ function VideoList() {
   );
 }
 
-export default VideoList;
+export default NextVideos;

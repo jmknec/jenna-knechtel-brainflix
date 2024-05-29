@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video-details {
+  &__quick-facts {
+    @include mobile-padding;
+    @include divider;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__creator-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+  }
+
+  &__channel {
+    @include mobile-subheaders;
+  }
+
+  &__date {
+    @include mobile-content;
+    color: $silver;
+  }
+
+  &__stats {
+    @extend .video-details__creator-details;
+  }
+
+  &__view-count {
+    @extend .video-details__date;
+  }
+
+  &__like-count {
+    @extend .video-details__date;
+  }
+}

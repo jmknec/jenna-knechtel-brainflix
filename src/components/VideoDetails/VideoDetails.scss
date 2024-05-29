@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video-details {
+  padding: 0 1rem;
+
+  &__title {
+    @include mobile-titles;
+    @include divider;
+    @include mobile-padding;
+    padding-top: 1.5rem;
+  }
+
+  &__description {
+    @include mobile-content;
+    @include mobile-padding;
+  }
+
+  &__comment-count {
+    @include mobile-labels;
+  }
+}

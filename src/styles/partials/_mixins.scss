@@ -19,6 +19,11 @@
   border-bottom: 1px solid $mercury;
 }
 
+@mixin mobile-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 // @mixin thumbnails {
 //   background-color: $mercury;
 //   border-radius: 4px;
