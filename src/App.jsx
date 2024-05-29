@@ -1,13 +1,13 @@
 import "./App.scss";
 import Header from "./components/Header/Header";
 import VideoList from "./components/VideoList/VideoList";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import MainSection from "./components/MainSection/MainSection";
 
 function App() {
   return (
     <>
       <Header />
-      <VideoPlayer />
+      <MainSection />
       <VideoList />
     </>
   );
