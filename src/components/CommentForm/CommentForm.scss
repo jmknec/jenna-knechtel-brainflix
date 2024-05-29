@@ -8,6 +8,10 @@
   gap: 1rem;
   padding: 1rem;
 
+  @include tablet {
+    width: 100%;
+  }
+
   &__avatar {
     position: relative;
     top: 1.5rem;
@@ -18,12 +22,26 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 1.5rem;
+      width: 100%;
+    }
+  }
+
+  &__input-container {
+    width: 100%;
   }
 
   &__label {
     @include mobile-labels;
     color: $silver;
     text-transform: uppercase;
+
+    @include tablet {
+      @include large-screen-labels;
+    }
   }
 
   &__input {
@@ -40,6 +58,20 @@
 
     &:active {
       border: 2px solid $brainflix-blue;
+    }
+
+    @include tablet {
+      @include large-screen-content;
+      padding: 1rem;
+      min-height: 2.5rem;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      flex: 0 0 auto;
+      position: relative;
+      top: 1.5rem;
     }
   }
 
