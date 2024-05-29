@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
 .main-nav__upload {
   @include mobile-labels;
@@ -9,6 +10,16 @@
   border: none;
   border-radius: 4px;
   height: 2.5rem;
-  min-width: 9.375rem;
   width: 100%;
+
+  &:hover {
+    background-color: $brainflix-dark-blue;
+    transition: all 0.1s ease-in-out;
+  }
+
+  @include tablet {
+    @include large-screen-labels;
+    padding: 0 2rem;
+    width: 9.375rem;
+  }
 }

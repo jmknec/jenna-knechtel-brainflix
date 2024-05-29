@@ -15,16 +15,3 @@ body {
   color: $brainflix-black;
   background-color: $white;
 }
-
-//breakpoints
-@mixin tablet {
-  @media screen and (min-width: $tablet-breakpoint) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media screen and (min-width: $desktop-breakpoint) {
-    @content;
-  }
-}

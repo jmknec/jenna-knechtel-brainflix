@@ -1,8 +1,28 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.main-nav__user {
+.main-nav__avatar {
   background-color: $mercury;
   border-radius: 50%;
   height: 2.25rem;
   width: 2.25rem;
+
+  @include tablet {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @include tablet {
+      display: initial;
+    }
+  }
 }

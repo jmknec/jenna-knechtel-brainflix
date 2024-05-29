@@ -1,6 +1,20 @@
-@use "./partials/typography" as *;
-@use "./partials/variables" as *;
+@use "./typography" as *;
+@use "./variables" as *;
 
+//media queries
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//
 @mixin divider {
   border-bottom: 1px solid $mercury;
 }
@@ -10,16 +24,9 @@
   border-radius: 4px;
 }
 
-@mixin mobile-avatar {
-  background-color: $mercury;
-  border-radius: 50%;
-  height: 2.25rem;
-  width: 2.25rem;
-}
-
-@mixin avatar {
-  background-color: $mercury;
-  border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
-}
+// @mixin avatar {
+//   background-color: $mercury;
+//   border-radius: 50%;
+//   height: 2.5rem;
+//   width: 2.5rem;
+// }
