@@ -5,19 +5,39 @@
 .video-details {
   padding: 0 1rem;
 
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+
   &__title {
     @include mobile-titles;
     @include divider;
     @include mobile-padding;
     padding-top: 1.5rem;
+
+    @include tablet {
+      @include large-screen-titles;
+      padding-bottom: 0;
+      padding-top: 2.25rem;
+      border-bottom: none;
+    }
   }
 
   &__description {
     @include mobile-content;
     @include mobile-padding;
+
+    @include tablet {
+      @include large-screen-content;
+      @include large-screen-padding;
+    }
   }
 
   &__comment-count {
-    @include mobile-labels;
+    @include mobile-subheaders;
+
+    @include tablet {
+      @include large-screen-subheaders;
+    }
   }
 }
