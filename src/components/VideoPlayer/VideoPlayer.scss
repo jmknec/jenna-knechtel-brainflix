@@ -3,10 +3,18 @@
 @use "../../styles/partials/typography" as *;
 
 .active-video {
+  background-color: $brainflix-dark-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 
   &__player {
     width: 100%;
     height: auto;
+
+    @include tablet {
+      max-width: 90%;
+    }
   }
 }
