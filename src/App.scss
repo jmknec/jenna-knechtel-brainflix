@@ -1,0 +1,15 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+
+.root {
+  width: 100%;
+  max-width: $tablet-breakpoint;
+
+  @include tablet {
+    max-width: $desktop-breakpoint;
+  }
+
+  @include desktop {
+    max-width: 1400px;
+  }
+}

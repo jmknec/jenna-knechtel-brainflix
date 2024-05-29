@@ -1,0 +1,30 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+
+  &__thumbnail {
+    background-color: $mercury;
+    border-radius: 4px;
+    width: 50%;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include mobile-subheaders;
+  }
+
+  &__channel {
+    @include mobile-content;
+  }
+}

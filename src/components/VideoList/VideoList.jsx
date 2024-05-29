@@ -1,16 +1,24 @@
 import videos from "../../data/video-details.json";
+import Video from "../Video/Video";
+import "./VideoList.scss";
 
 function VideoList() {
   return (
-    <div className="video-list">
-      {videos.map((video) => (
-        <div className="video" key={video.id}>
-          <img className="video__thumbnail" src={video.image} />
-          <h2 className="video__title">{video.title}</h2>
-          <p className="video__channel">{video.channel}</p>
-        </div>
-      ))}
-    </div>
+    <aside className="video-list">
+      <h2 className="video-list__heading">Next Videos</h2>
+      <div className="video-list__container">
+        {videos.map((video) => {
+          return (
+            <Video
+              key={video.id}
+              thumbnail={video.image}
+              title={video.title}
+              channel={video.channel}
+            />
+          );
+        })}
+      </div>
+    </aside>
   );
 }
 
