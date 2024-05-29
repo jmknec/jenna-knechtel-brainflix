@@ -81,15 +81,6 @@
     @extend .main-nav__site;
   }
 
-  &__upload {
-    @include mobile-labels;
-    position: relative;
-
-    @include tablet {
-      @include large-screen-labels;
-    }
-  }
-
   &__upload-icon {
     position: absolute;
     left: 0.75rem;

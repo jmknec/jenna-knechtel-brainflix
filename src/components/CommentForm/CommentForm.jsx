@@ -8,22 +8,24 @@ function CommentForm() {
     <form className="comment-form" action="">
       <div className="comment-form__avatar-container">
         <Avatar
-          className="main-nav__avatar main-nav__avatar--mobile"
+          className="comment-form__avatar"
           image={Image}
           alt="User profile picture"
         />
       </div>
       <div className="comment-form__content">
-        <label className="comment-form__label" htmlFor="comment">
-          Join the conversation
-        </label>
-        <textarea
-          className="comment-form__input"
-          name="comment"
-          id="form-comment"
-          type="text"
-          placeholder="Add a new comment"
-        ></textarea>
+        <div className="comment-form__input-container">
+          <label className="comment-form__label" htmlFor="form-comment">
+            Join the conversation
+          </label>
+          <textarea
+            className="comment-form__input"
+            name="comment"
+            id="form-comment"
+            type="text"
+            placeholder="Add a new comment"
+          ></textarea>
+        </div>
         <Button
           className="comment-form__button"
           btnLabel="Comment"
