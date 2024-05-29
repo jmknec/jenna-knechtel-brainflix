@@ -1,5 +1,4 @@
 import "./MainSection.scss";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import CommentForm from "../CommentForm/CommentForm";
 
