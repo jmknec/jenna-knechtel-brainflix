@@ -1,29 +1,21 @@
 import "./Video.scss";
-import Comment from "../Comment/Comment";
 
-function Video({ title, channel, thumbnail, timestamp, comments }) {
+function Video(props) {
+  const { title, channel, image, timestamp, id } = props.video;
+  const { setSelectedVideo } = props;
   const date = new Date(timestamp);
 
+  const clickHandler = () => {
+    setSelectedVideo(id);
+  };
+
   return (
-    <div className="video">
-      <img className="video__thumbnail" src={thumbnail} />
+    <div className="video" onClick={clickHandler}>
+      <img className="video__thumbnail" src={image} />
       <div className="video__details">
         <h2 className="video__title">{title}</h2>
         <p className="video__channel">{channel}</p>
         <p className="video__date">{date.toLocaleDateString()}</p>
-        {/* <ul className="video__comments">
-          {comments.map((comment) => {
-            return (
-              <Comment
-                key={comment.id}
-                name={comment.name}
-                timestamp={comment.timestamp}
-                comment={comment.comment}
-                likes={comment.likes}
-              />
-            );
-          })} */}
-        {/* </ul> */}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import videos from "./data/video-details.json";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import MainSection from "./components/MainSection/MainSection";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import ActiveVideoPlayer from "./components/ActiveVideoPlayer/ActiveVideoPlayer";
 import VideoList from "./components/VideoList/VideoList";
 
 function App() {
@@ -13,12 +13,11 @@ function App() {
   const selectedVideoObj = videos.find((video) => {
     return video.id === selectedVideo;
   });
-  // console.log(selectedVideoObj);
 
   return (
     <>
       <Header />
-      <VideoPlayer selectedVideoObj={selectedVideoObj} />
+      <ActiveVideoPlayer selectedVideoObj={selectedVideoObj} />
       <MainSection />
       <VideoList
         selectedVideo={selectedVideo}
