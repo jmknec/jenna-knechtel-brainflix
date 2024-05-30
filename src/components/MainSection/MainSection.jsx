@@ -1,6 +1,7 @@
 import "./MainSection.scss";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import CommentForm from "../CommentForm/CommentForm";
+import CommentSection from "../CommentSection/CommentSection";
 
 function MainSection() {
   return (
@@ -11,6 +12,7 @@ function MainSection() {
         comments="3 Comments"
       />
       <CommentForm />
+      <CommentSection />
     </main>
   );
 }

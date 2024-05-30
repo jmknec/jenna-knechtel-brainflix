@@ -1,8 +1,8 @@
 import "./App.scss";
 import Header from "./components/Header/Header";
-import VideoList from "./components/NextVideos/NextVideos";
 import MainSection from "./components/MainSection/MainSection";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import VideoList from "./components/VideoList/VideoList";
 
 function App() {
   return (
