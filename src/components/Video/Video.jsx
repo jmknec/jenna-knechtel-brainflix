@@ -11,7 +11,7 @@ function Video({ title, channel, thumbnail, timestamp, comments }) {
         <h2 className="video__title">{title}</h2>
         <p className="video__channel">{channel}</p>
         <p className="video__date">{date.toLocaleDateString()}</p>
-        <ul className="video__comments">
+        {/* <ul className="video__comments">
           {comments.map((comment) => {
             return (
               <Comment
@@ -22,8 +22,8 @@ function Video({ title, channel, thumbnail, timestamp, comments }) {
                 likes={comment.likes}
               />
             );
-          })}
-        </ul>
+          })} */}
+        {/* </ul> */}
       </div>
     </div>
   );
