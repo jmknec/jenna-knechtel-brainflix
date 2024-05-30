@@ -3,13 +3,14 @@ import VideoDetails from "../VideoDetails/VideoDetails";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentSection from "../CommentSection/CommentSection";
 
-function MainSection() {
+function MainSection(props) {
+  const { title, description } = props.selectedVideoObj;
   return (
     <main className="main">
       <VideoDetails
-        title="The Future of Artificial Intelligence"
-        description="Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier."
-        comments="3 Comments"
+        title={title}
+        description={description}
+        // comments={comments}
       />
       <CommentForm />
       <CommentSection />

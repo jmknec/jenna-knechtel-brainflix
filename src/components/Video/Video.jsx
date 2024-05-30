@@ -1,9 +1,9 @@
 import "./Video.scss";
 
 function Video(props) {
-  const { title, channel, image, timestamp, id } = props.video;
+  const { title, channel, image, id } = props.video;
   const { setSelectedVideo } = props;
-  const date = new Date(timestamp);
+  // const date = new Date(timestamp);
 
   const clickHandler = () => {
     setSelectedVideo(id);
@@ -15,7 +15,7 @@ function Video(props) {
       <div className="video__details">
         <h2 className="video__title">{title}</h2>
         <p className="video__channel">{channel}</p>
-        <p className="video__date">{date.toLocaleDateString()}</p>
+        {/* <p className="video__date">{date.toLocaleDateString()}</p> */}
       </div>
     </div>
   );

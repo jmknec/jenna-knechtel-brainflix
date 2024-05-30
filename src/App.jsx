@@ -18,7 +18,7 @@ function App() {
     <>
       <Header />
       <ActiveVideoPlayer selectedVideoObj={selectedVideoObj} />
-      <MainSection />
+      <MainSection selectedVideoObj={selectedVideoObj} />
       <VideoList
         selectedVideo={selectedVideo}
         setSelectedVideo={setSelectedVideo}

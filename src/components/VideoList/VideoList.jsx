@@ -1,6 +1,6 @@
 import videos from "../../data/video-details.json";
-import Video from "../Video/Video";
 import "./VideoList.scss";
+import Video from "../Video/Video";
 
 function VideoList(props) {
   return (
