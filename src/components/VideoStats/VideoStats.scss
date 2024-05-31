@@ -11,7 +11,6 @@
     align-items: center;
 
     @include tablet {
-      // @include large-screen-padding;
       justify-content: space-between;
       width: 100%;
     }
@@ -51,11 +50,18 @@
     @extend .video-details__creator-details;
   }
 
-  &__view-count {
+  &__numbers-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__numbers {
     @extend .video-details__date;
   }
 
-  &__like-count {
-    @extend .video-details__date;
+  &__icon {
+    fill: $silver;
+    width: 1.125rem;
+    height: 1.125rem;
   }
 }

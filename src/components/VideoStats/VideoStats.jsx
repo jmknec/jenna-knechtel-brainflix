@@ -1,4 +1,6 @@
 import "./VideoStats.scss";
+import Views from "../../assets/icons/views.svg";
+import Likes from "../../assets/icons/likes.svg";
 
 function VideoStats(props) {
   const { channel, timestamp, views, likes } = props;
@@ -11,8 +13,14 @@ function VideoStats(props) {
         <p className="video-details__date">{date.toLocaleDateString()}</p>
       </div>
       <div className="video-details__stats">
-        <p className="video-details__view-count">{views}</p>
-        <p className="video-details__like-count">{likes}</p>
+        <div className="video-details__numbers-container">
+          <img className="video-details__icon" src={Views} alt="eye icon" />
+          <p className="video-details__numbers">{views}</p>
+        </div>
+        <div className="video-details__numbers-container">
+          <img className="video-details__icon" src={Likes} alt="heart icon" />
+          <p className="video-details__numbers">{likes}</p>
+        </div>
       </div>
     </div>
   );
