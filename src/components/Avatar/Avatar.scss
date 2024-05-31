@@ -29,4 +29,9 @@
 
 .comment-form__avatar {
   @extend .main-nav__avatar;
+  flex: 0 0 auto;
+}
+
+.comment__avatar {
+  @extend .comment-form__avatar;
 }
