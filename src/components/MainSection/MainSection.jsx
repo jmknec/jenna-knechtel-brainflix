@@ -4,9 +4,19 @@ import CommentForm from "../CommentForm/CommentForm";
 import CommentSection from "../CommentSection/CommentSection";
 
 function MainSection(props) {
-  const { title, description, comments, channel, timestamp, views, likes } =
-    props.selectedVideoObj;
+  const {
+    title,
+    description,
+    comments,
+    channel,
+    timestamp,
+    views,
+    likes,
+    // selectedVideo,
+    // selectedVideoObj,
+  } = props.selectedVideoObj;
   // const { selectedVideoObj } = selectedVideoObj;
+  // console.log(props);
 
   return (
     <main className="main">
@@ -21,7 +31,10 @@ function MainSection(props) {
         // selectedVideoObj={selectedVideoObj}
       />
       <CommentForm />
-      <CommentSection selectedVideoComments={comments} />
+      <CommentSection
+        // selectedVideo={selectedVideo}
+        selectedVideoComments={comments}
+      />
     </main>
   );
 }
