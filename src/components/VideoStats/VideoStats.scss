@@ -14,6 +14,10 @@
       justify-content: space-between;
       width: 100%;
     }
+
+    @include desktop {
+      padding-right: 1.5rem;
+    }
   }
 
   &__creator-details {
@@ -61,7 +65,18 @@
 
   &__icon {
     fill: $silver;
-    width: 1.125rem;
-    height: 1.125rem;
+    width: 18px;
+    height: 18px;
+
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__description {
+    @include desktop {
+      padding-right: 1.5rem;
+    }
   }
 }

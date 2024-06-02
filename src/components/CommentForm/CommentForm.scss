@@ -6,10 +6,14 @@
   @include divider;
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
 
   @include tablet {
     width: 100%;
+  }
+
+  @include desktop {
+    padding: 1.5rem 1rem;
   }
 
   &__avatar {
@@ -46,11 +50,13 @@
 
   &__input {
     @include mobile-content;
+    background-color: $alabaster;
     padding: 0.75rem;
     border: 1px solid $mercury;
     border-radius: 4px;
-    min-height: 2.25rem;
+    min-height: 36px;
     width: 100%;
+    resize: none;
 
     &::placeholder {
       color: $brainflix-black;
@@ -63,7 +69,7 @@
     @include tablet {
       @include large-screen-content;
       padding: 1rem;
-      min-height: 2.5rem;
+      min-height: 40px;
     }
   }
 
@@ -79,7 +85,7 @@
     position: absolute;
     left: 0.75rem;
     bottom: 30%;
-    height: 1.25rem;
+    height: 20px;
 
     @include tablet {
       bottom: 25%;

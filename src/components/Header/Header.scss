@@ -14,16 +14,17 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
   }
 
   @include desktop {
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 0;
+    max-width: min(80%, 1280px);
   }
 
   &__logo {
-    max-height: 1.563rem;
-    max-width: 7.6rem;
+    max-height: 25px;
+    max-width: 120px;
   }
 }
 
@@ -69,11 +70,15 @@
     border-radius: 4px;
     padding: 0.75rem;
     padding-left: 2.25rem;
-    height: 2.25rem;
+    height: 36px;
     width: 100%;
 
     &::placeholder {
       color: $brainflix-black;
+    }
+
+    @include tablet {
+      @include large-screen-content;
     }
   }
 
@@ -85,10 +90,9 @@
     position: absolute;
     left: 0.75rem;
     bottom: 30%;
-    height: 1.25rem;
+    height: 20px;
 
     @include tablet {
-      //   height: 1.25rem;
       bottom: 25%;
     }
   }

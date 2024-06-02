@@ -2,21 +2,11 @@ import "./MainSection.scss";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentSection from "../CommentSection/CommentSection";
+import VideoList from "../VideoList/VideoList";
 
 function MainSection(props) {
-  const {
-    title,
-    description,
-    comments,
-    channel,
-    timestamp,
-    views,
-    likes,
-    // selectedVideo,
-    // selectedVideoObj,
-  } = props.selectedVideoObj;
-  // const { selectedVideoObj } = selectedVideoObj;
-  // console.log(props);
+  const { title, description, comments, channel, timestamp, views, likes } =
+    props.selectedVideoObj;
 
   return (
     <main className="main">
@@ -28,13 +18,9 @@ function MainSection(props) {
         timestamp={timestamp}
         views={views}
         likes={likes}
-        // selectedVideoObj={selectedVideoObj}
       />
       <CommentForm />
-      <CommentSection
-        // selectedVideo={selectedVideo}
-        selectedVideoComments={comments}
-      />
+      <CommentSection selectedVideoComments={comments} />
     </main>
   );
 }

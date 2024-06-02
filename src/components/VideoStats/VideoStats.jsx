@@ -9,7 +9,7 @@ function VideoStats(props) {
   return (
     <div className="video-details__quick-facts">
       <div className="video-details__creator-details">
-        <h2 className="video-details__channel">{channel}</h2>
+        <h2 className="video-details__channel">By {channel}</h2>
         <p className="video-details__date">{date.toLocaleDateString()}</p>
       </div>
       <div className="video-details__stats">

@@ -9,7 +9,7 @@
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
-  height: 2.5rem;
+  height: 40px;
   width: 100%;
   position: relative;
 
@@ -21,7 +21,7 @@
   @include tablet {
     @include large-screen-labels;
     padding: 0 2rem;
-    width: 9.375rem;
+    width: 150px;
   }
 }
 

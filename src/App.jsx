@@ -15,18 +15,20 @@ function App() {
   });
 
   return (
-    <>
+    <div className="app-container">
       <Header />
       <ActiveVideoPlayer selectedVideoObj={selectedVideoObj} />
-      <MainSection
-        selectedVideo={selectedVideo}
-        selectedVideoObj={selectedVideoObj}
-      />
-      <VideoList
-        selectedVideo={selectedVideo}
-        setSelectedVideo={setSelectedVideo}
-      />
-    </>
+      <div className="main-container">
+        <MainSection
+          selectedVideo={selectedVideo}
+          selectedVideoObj={selectedVideoObj}
+        />
+        <VideoList
+          selectedVideo={selectedVideo}
+          setSelectedVideo={setSelectedVideo}
+        />
+      </div>
+    </div>
   );
 }
 

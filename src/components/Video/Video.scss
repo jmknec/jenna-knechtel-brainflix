@@ -8,10 +8,15 @@
   padding: 0.5rem 0;
   width: 100%;
 
+  @include tablet {
+    padding: 0.75rem 0;
+  }
+
   &__thumbnail {
     background-color: $mercury;
     border-radius: 4px;
     width: 50%;
+    aspect-ratio: 16/9;
   }
 
   &__details {
@@ -22,9 +27,17 @@
 
   &__title {
     @include mobile-subheaders;
+
+    @include tablet {
+      @include large-screen-subheaders;
+    }
   }
 
   &__channel {
     @include mobile-content;
+
+    @include tablet {
+      @include large-screen-content;
+    }
   }
 }

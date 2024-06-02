@@ -1,15 +1,41 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/mixins" as *;
 
-.root {
+//global resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Avenir;
+  color: $brainflix-black;
+  background-color: $white;
+}
+
+//component
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: $tablet-breakpoint;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include tablet {
-    max-width: $desktop-breakpoint;
+    max-width: 800px;
   }
 
   @include desktop {
-    max-width: 1400px;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: min(80%, 1280px);
   }
 }

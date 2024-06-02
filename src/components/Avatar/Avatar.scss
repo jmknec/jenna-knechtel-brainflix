@@ -4,12 +4,12 @@
 .main-nav__avatar {
   background-color: $mercury;
   border-radius: 50%;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 36px;
+  width: 36px;
 
   @include tablet {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 40px;
+    width: 40px;
   }
 
   &--mobile {

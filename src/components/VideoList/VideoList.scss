@@ -6,14 +6,35 @@
   padding: 1rem;
   width: 100%;
 
+  @include tablet {
+    padding: 1.5rem;
+  }
+
+  @include desktop {
+    border-left: 1px solid $mercury;
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    width: 34%;
+  }
+
   &__heading {
     @include section-headers;
-    color: $silver;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
     text-transform: uppercase;
-    padding: 1rem 0;
+    color: $silver;
   }
 
   &__container {
     width: 100%;
+
+    @include tablet {
+      max-width: 40%;
+    }
+
+    @include desktop {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
