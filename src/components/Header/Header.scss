@@ -3,6 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
+  @include divider;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.comment-form__input {
+  @include mobile-content;
+  background-color: $alabaster;
+  padding: 0.75rem;
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  min-height: 36px;
+  width: 100%;
+  resize: none;
+
+  &::placeholder {
+    color: $brainflix-black;
+  }
+
+  &:active {
+    border: 2px solid $brainflix-blue;
+  }
+
+  @include tablet {
+    @include large-screen-content;
+    padding: 1rem;
+    min-height: 40px;
+  }
+}
+
+.upload-form__input {
+  @extend .comment-form__input;
+}

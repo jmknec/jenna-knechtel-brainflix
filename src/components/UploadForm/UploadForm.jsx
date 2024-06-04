@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
 import Publish from "../../assets/icons/publish.svg";
 import "./UploadForm.scss";
@@ -11,7 +12,7 @@ function UploadForm() {
           Title your video
         </label>
         <input
-          className="upload-form__title"
+          className="upload-form__input"
           id="title"
           name="title-input"
           type="text"
@@ -20,11 +21,12 @@ function UploadForm() {
         <label className="upload-form__label" htmlFor="description">
           Add a video description
         </label>
-        <textarea
-          className="upload-form__description"
-          name="description-input"
+        <TextInput
+          className="upload-form__input"
           id="description"
-        ></textarea>
+          name="description-input"
+          placeholder="Add a description to your video"
+        />
         <Button
           className="upload-form__publish"
           btnLabel="Publish"

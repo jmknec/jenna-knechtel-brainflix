@@ -1,5 +1,6 @@
 import "./CommentForm.scss";
 import Avatar from "../Avatar/Avatar";
+import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
 import Image from "../../assets/images/Mohan-muruge.jpg";
 
@@ -18,20 +19,19 @@ function CommentForm() {
           <label className="comment-form__label" htmlFor="form-comment">
             Join the conversation
           </label>
-          <textarea
+          <TextInput
             className="comment-form__input"
-            name="comment"
             id="form-comment"
-            type="text"
+            name="comment"
             placeholder="Add a new comment"
-          ></textarea>
+          />
         </div>
         <Button
           className="comment-form__button"
           btnLabel="Comment"
           icon="src/assets/icons/add_comment.svg"
           iconClass="comment-form__icon"
-          altText="blue addition sign on white text bubble"
+          // altText="blue addition sign on white text bubble"
         />
       </div>
     </form>
