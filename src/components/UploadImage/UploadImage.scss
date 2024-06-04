@@ -2,8 +2,32 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.upload__image-heading {
-  @include mobile-labels;
-  color: $silver;
-  text-transform: uppercase;
+.upload {
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__image-heading {
+    @include mobile-labels;
+    color: $silver;
+    text-transform: uppercase;
+
+    @include tablet {
+      @include large-screen-labels;
+    }
+  }
+
+  &__image {
+    background-color: $mercury;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+  }
 }

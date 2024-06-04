@@ -7,6 +7,12 @@
   flex-direction: column;
   gap: 1rem;
 
+  @include tablet {
+    @include divider;
+    padding-bottom: 1.5rem;
+    gap: 1.5rem;
+  }
+
   &__input-container {
     display: flex;
     flex-direction: column;
@@ -17,20 +23,17 @@
     @include mobile-labels;
     color: $silver;
     text-transform: uppercase;
+
+    @include tablet {
+      @include large-screen-labels;
+    }
   }
 
   &__input {
     @include mobile-content;
-  }
-
-  &__publish-icon {
-    position: absolute;
-    left: 0.75rem;
-    bottom: 30%;
-    height: 20px;
 
     @include tablet {
-      bottom: 25%;
+      @include large-screen-content;
     }
   }
 }

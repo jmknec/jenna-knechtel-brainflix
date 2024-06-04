@@ -1,6 +1,4 @@
 import TextInput from "../TextInput/TextInput";
-import Button from "../Button/Button";
-import Publish from "../../assets/icons/publish.svg";
 import "./UploadForm.scss";
 
 function UploadForm() {
@@ -30,12 +28,6 @@ function UploadForm() {
             placeholder="Add a description to your video"
           />
         </div>
-        <Button
-          className="upload-form__publish"
-          btnLabel="Publish"
-          icon={Publish}
-          iconClass="upload-form__publish-icon"
-        />
       </form>
     </>
   );
