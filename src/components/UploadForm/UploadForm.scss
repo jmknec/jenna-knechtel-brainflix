@@ -8,9 +8,12 @@
   gap: 1rem;
 
   @include tablet {
-    @include divider;
     padding-bottom: 1.5rem;
     gap: 1.5rem;
+  }
+
+  @include desktop {
+    width: 66%;
   }
 
   &__input-container {

@@ -9,8 +9,10 @@ function UploadPage() {
   return (
     <main className="upload">
       <h1 className="upload__title">Upload Video</h1>
-      <UploadImage />
-      <UploadForm />
+      <div className="upload__container">
+        <UploadImage />
+        <UploadForm />
+      </div>
       <div className="upload__click-container">
         <Button
           className="upload__publish"

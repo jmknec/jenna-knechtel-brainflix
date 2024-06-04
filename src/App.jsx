@@ -7,13 +7,13 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 function App() {
   return (
     <BrowserRouter>
-      {/* <div className="app-container"> */}
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="upload" element={<UploadPage />} />
-      </Routes>
-      {/* </div> */}
+      <div className="app-container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="upload" element={<UploadPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
