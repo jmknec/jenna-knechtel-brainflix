@@ -3,5 +3,25 @@
 @use "../../styles/partials/typography" as *;
 
 .upload {
-  @include mobile-titles;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  &__title {
+    @include mobile-titles;
+    padding-top: 0.5rem;
+  }
+
+  &__nav-link {
+    align-self: center;
+    text-decoration: none;
+    color: $brainflix-blue;
+  }
+
+  &__cancel {
+    @include mobile-labels;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
 }

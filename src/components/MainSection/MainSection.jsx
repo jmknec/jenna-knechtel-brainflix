@@ -2,7 +2,6 @@ import "./MainSection.scss";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentSection from "../CommentSection/CommentSection";
-import VideoList from "../VideoList/VideoList";
 
 function MainSection(props) {
   const { title, description, comments, channel, timestamp, views, likes } =

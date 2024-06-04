@@ -28,3 +28,7 @@
 .comment-form__button {
   @extend .main-nav__upload;
 }
+
+.upload-form__publish {
+  @extend .comment-form__button;
+}
