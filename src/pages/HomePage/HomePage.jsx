@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 // import videos from "../../data/video-details.json";
 import "./HomePage.scss";
@@ -14,6 +14,7 @@ function HomePage() {
   const [videosList, setVideosList] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // useEffect(() => {
   const fetchVideos = async () => {
@@ -21,8 +22,10 @@ function HomePage() {
       const videosResponse = await axios.get(
         `${baseUrl}videos?api_key=${apiKey}`
       );
-      setVideosList(videosResponse.data);
-      setCurrentVideo(videosResponse.data[0]);
+      navigate(`/${videosResponse.data[0].id}`);
+
+      // setVideosList(videosResponse.data);
+      // setCurrentVideo(videosResponse.data[0]);
       // console.log(videosList);
       // console.log(currentVideo);
     } catch (error) {
@@ -61,11 +64,7 @@ function HomePage() {
   }, [id]);
 
   if (!currentVideo) {
-    return (
-      <>
-        <p>Give me a minute!</p>
-      </>
-    );
+    return <>{/* <p>Give me a minute!</p> */}</>;
   }
 
   // const [selectedVideo, setSelectedVideo] = useState(
@@ -79,10 +78,11 @@ function HomePage() {
 
   return (
     <>
-      <CurrentVideo currentVideoObj={currentVideo} />
+      <CurrentVideo currentVideo={currentVideo} />
       <div className="main-container">
         <MainSection currentVideo={currentVideo} />
         <VideoList
+          videosList={videosList}
           currentVideo={currentVideo}
           setCurrentVideo={setCurrentVideo}
         />
