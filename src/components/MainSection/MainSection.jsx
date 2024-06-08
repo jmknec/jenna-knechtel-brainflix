@@ -5,7 +5,7 @@ import CommentSection from "../CommentSection/CommentSection";
 
 function MainSection(props) {
   const { title, description, comments, channel, timestamp, views, likes } =
-    props.selectedVideoObj;
+    props.currentVideo;
 
   return (
     <main className="main">

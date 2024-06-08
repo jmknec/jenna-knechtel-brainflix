@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 // import videos from "../../data/video-details.json";
 import "./HomePage.scss";
-// import ActiveVideoPlayer from "../../components/ActiveVideoPlayer/ActiveVideoPlayer";
-// import MainSection from "../../components/MainSection/MainSection";
-// import VideoList from "../../components/VideoList/VideoList";
+import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
+import MainSection from "../../components/MainSection/MainSection";
+import VideoList from "../../components/VideoList/VideoList";
 
 function HomePage() {
   const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
   const apiKey = "6ab3a096-a9af-4480-80df-8f33eec68532";
 
   const [videosList, setVideosList] = useState([]);
-  const [videoDetails, setVideoDetails] = useState(null);
+  const [currentVideo, setCurrentVideo] = useState(null);
   const { id } = useParams();
 
   // useEffect(() => {
@@ -22,7 +22,9 @@ function HomePage() {
         `${baseUrl}videos?api_key=${apiKey}`
       );
       setVideosList(videosResponse.data);
-      console.log(videosList);
+      setCurrentVideo(videosResponse.data[0]);
+      // console.log(videosList);
+      // console.log(currentVideo);
     } catch (error) {
       console.error(error);
     }
@@ -36,8 +38,13 @@ function HomePage() {
       const detailsResponse = await axios.get(
         `${baseUrl}videos/${id}?api_key=${apiKey}`
       );
-      setVideoDetails(detailsResponse.data);
-      console.log(videoDetails);
+      const allVideosResponse = await axios.get(
+        `${baseUrl}videos?api_key=${apiKey}`
+      );
+      setCurrentVideo(detailsResponse.data);
+      setVideosList(allVideosResponse.data);
+      // console.log(currentVideo);
+      // console.log(videosList);
     } catch (error) {
       console.error(error);
     }
@@ -51,28 +58,35 @@ function HomePage() {
       return;
     }
     fetchVideos();
-  }, []);
+  }, [id]);
+
+  if (!currentVideo) {
+    return (
+      <>
+        <p>Give me a minute!</p>
+      </>
+    );
+  }
 
   // const [selectedVideo, setSelectedVideo] = useState(
   //   "84e96018-4022-434e-80bf-000ce4cd12b8"
   // );
-  // const selectedVideoObj = videos.find((video) => {
-  //   return video.id === selectedVideo;
+  // const currentVideoObj = videosList.find((video) => {
+  //   video.id === currentVideo;
+  //   return currentVideoObj;
   // });
+  // console.log(currentVideoObj);
 
   return (
     <>
-      {/* <ActiveVideoPlayer selectedVideoObj={selectedVideoObj} /> */}
-      {/* <div className="main-container">
-        <MainSection
-          selectedVideo={selectedVideo}
-          selectedVideoObj={selectedVideoObj}
-        />
+      <CurrentVideo currentVideoObj={currentVideo} />
+      <div className="main-container">
+        <MainSection currentVideo={currentVideo} />
         <VideoList
-          selectedVideo={selectedVideo}
-          setSelectedVideo={setSelectedVideo}
+          currentVideo={currentVideo}
+          setCurrentVideo={setCurrentVideo}
         />
-      </div> */}
+      </div>
     </>
   );
 }

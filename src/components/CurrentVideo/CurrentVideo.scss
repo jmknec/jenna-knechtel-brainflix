@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.active-video {
+.current-video {
   background-color: $brainflix-dark-black;
   display: flex;
   justify-content: center;
