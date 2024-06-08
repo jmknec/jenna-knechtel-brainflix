@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import Avatar from "../Avatar/Avatar";
 import Image from "../../assets/images/Mohan-muruge.jpg";
@@ -8,11 +9,13 @@ function Header(props) {
   return (
     <header className="header">
       <div className="header__content">
-        <img
-          className="header__logo"
-          src="src/assets/logos/BrainFlix-logo.svg"
-          alt="BrainFlix logo white play button blue background"
-        ></img>
+        <Link to={"/"}>
+          <img
+            className="header__logo"
+            src="src/assets/logos/BrainFlix-logo.svg"
+            alt="BrainFlix logo white play button blue background"
+          ></img>
+        </Link>
         <div className="main-nav">
           <div className="main-nav__site">
             <search className="main-nav__search">
@@ -33,13 +36,15 @@ function Header(props) {
             />
           </div>
           <div className="main-nav__user">
-            <Button
-              className="main-nav__upload"
-              btnLabel="Upload"
-              icon={Upload}
-              iconClass="main-nav__upload-icon"
-              altText="up arrow above horizontal line"
-            />
+            <Link to={"/upload"}>
+              <Button
+                className="main-nav__upload"
+                btnLabel="Upload"
+                icon={Upload}
+                iconClass="main-nav__upload-icon"
+                altText="up arrow above horizontal line"
+              />
+            </Link>
             <Avatar
               className="main-nav__avatar main-nav__avatar--tablet"
               image={Image}
