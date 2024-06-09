@@ -7,8 +7,8 @@
     @include mobile-padding;
     @include divider;
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
 
     @include tablet {
       justify-content: space-between;
@@ -65,12 +65,12 @@
 
   &__icon {
     fill: $silver;
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
 
     @include tablet {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 

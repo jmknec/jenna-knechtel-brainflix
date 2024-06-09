@@ -54,9 +54,9 @@ function HomePage() {
   }
 
   return (
-    <>
+    <main className="main">
       <CurrentVideo currentVideo={currentVideo} />
-      <div className="main-container">
+      <div className="main__content">
         <MainSection currentVideo={currentVideo} />
         <VideoList
           videosList={videosList}
@@ -64,7 +64,7 @@ function HomePage() {
           setCurrentVideo={setCurrentVideo}
         />
       </div>
-    </>
+    </main>
   );
 }
 

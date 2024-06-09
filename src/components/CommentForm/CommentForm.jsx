@@ -6,7 +6,7 @@ import Image from "../../assets/images/Mohan-muruge.jpg";
 
 function CommentForm() {
   return (
-    <form className="comment-form" action="">
+    <form className="comment-form">
       <div className="comment-form__avatar-container">
         <Avatar
           className="comment-form__avatar"

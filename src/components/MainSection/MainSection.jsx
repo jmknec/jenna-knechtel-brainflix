@@ -8,7 +8,7 @@ function MainSection(props) {
     props.currentVideo;
 
   return (
-    <main className="main">
+    <div className="content-container">
       <VideoDetails
         title={title}
         description={description}
@@ -20,7 +20,7 @@ function MainSection(props) {
       />
       <CommentForm />
       <CommentSection selectedVideoComments={comments} />
-    </main>
+    </div>
   );
 }
 

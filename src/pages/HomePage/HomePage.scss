@@ -1,3 +1,23 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content {
+    padding: 0 1rem;
+
+    @include tablet {
+      padding: 0 2.5rem;
+    }
+
+    @include desktop {
+      display: flex;
+      max-width: min(80%, 1280px);
+      height: 100%;
+    }
+  }
+}

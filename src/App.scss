@@ -24,19 +24,3 @@ body {
   align-items: center;
   width: 100%;
 }
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include tablet {
-    max-width: 800px;
-  }
-
-  @include desktop {
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: min(80%, 1280px);
-  }
-}
