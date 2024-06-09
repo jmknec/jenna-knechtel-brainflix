@@ -8,12 +8,23 @@
   gap: 1rem;
 
   @include tablet {
-    padding-bottom: 1.5rem;
     gap: 1.5rem;
   }
 
   @include desktop {
     width: 66%;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include tablet {
+      @include divider;
+      gap: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
   }
 
   &__input-container {
