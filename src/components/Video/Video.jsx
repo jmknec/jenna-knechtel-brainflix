@@ -1,15 +1,10 @@
 import "./Video.scss";
 
 function Video(props) {
-  const { title, channel, image, id } = props.video;
-  const { setSelectedVideo } = props;
-
-  const clickHandler = () => {
-    setSelectedVideo(id);
-  };
+  const { title, channel, image } = props.video;
 
   return (
-    <div className="video" onClick={clickHandler}>
+    <div className="video">
       <img className="video__thumbnail" src={image} />
       <div className="video__details">
         <h2 className="video__title">{title}</h2>

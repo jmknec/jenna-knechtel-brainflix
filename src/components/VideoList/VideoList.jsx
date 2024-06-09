@@ -1,26 +1,31 @@
-import videos from "../../data/video-details.json";
+import { Link, useParams } from "react-router-dom";
+// import videos from "../../data/video-details.json";
 import "./VideoList.scss";
 import Video from "../Video/Video";
 
 function VideoList(props) {
+  const { videosList, currentVideo, setCurrentVideo } = props;
+  // const { id } = useParams();
+
   return (
     <aside className="video-list">
       <h2 className="video-list__heading">Next Videos</h2>
       <div className="video-list__container">
-        {videos
+        {videosList
           .filter((video) => {
-            return video.id !== props.selectedVideo;
+            return video.id !== currentVideo.id;
           })
           .map((video) => {
             return (
-              <Video
-                key={video.id}
-                video={video}
-                title={video.title}
-                channel={video.channel}
-                image={video.image}
-                setSelectedVideo={props.setSelectedVideo}
-              />
+              <Link to={`/${video.id}`} key={video.id}>
+                <Video
+                  video={video}
+                  title={video.title}
+                  channel={video.channel}
+                  image={video.image}
+                  setCurrentVideo={setCurrentVideo}
+                />
+              </Link>
             );
           })}
       </div>
