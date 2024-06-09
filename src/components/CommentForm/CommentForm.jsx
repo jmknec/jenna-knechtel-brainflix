@@ -27,11 +27,11 @@ function CommentForm() {
           />
         </div>
         <Button
-          className="comment-form__button"
+          className="comment-form__button button"
           btnLabel="Comment"
           icon="src/assets/icons/add_comment.svg"
           iconClass="comment-form__icon"
-          // altText="blue addition sign on white text bubble"
+          altText="blue addition sign on white text bubble"
         />
       </div>
     </form>

@@ -30,8 +30,8 @@
   }
 
   &__logo {
-    max-height: 1.563rem;
-    max-width: 7.5rem;
+    max-height: 1.563em;
+    max-width: 7.5em;
   }
 }
 
@@ -50,7 +50,6 @@
 
   @include desktop {
     justify-content: flex-end;
-    width: 45%;
   }
 
   &__site {
@@ -58,23 +57,31 @@
     flex-direction: row;
 
     @include desktop {
-      width: 100%;
+      flex: 1 0 auto;
     }
   }
 
   &__user {
-    @extend .main-nav__site;
+    @extend .main-nav;
+
+    @include desktop {
+      flex: 0 0 auto;
+    }
   }
 
   &__link {
     width: 100%;
+
+    @include desktop {
+      width: max-content;
+    }
   }
 
   &__upload-icon {
     position: absolute;
     left: 0.75rem;
     bottom: 30%;
-    height: 20px;
+    height: 50%;
 
     @include tablet {
       bottom: 25%;

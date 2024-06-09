@@ -44,7 +44,7 @@ function UploadForm() {
         </div>
         <div className="upload__click-container">
           <Button
-            className="upload__publish"
+            className="upload__publish button"
             btnLabel="Publish"
             icon={Publish}
             iconClass="upload__publish-icon"

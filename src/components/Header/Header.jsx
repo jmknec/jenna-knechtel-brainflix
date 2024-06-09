@@ -29,7 +29,7 @@ function Header(props) {
           <div className="main-nav__user">
             <Link className="main-nav__link" to={"/upload"}>
               <Button
-                className="main-nav__upload"
+                className="main-nav__upload button"
                 btnLabel="Upload"
                 icon={Upload}
                 iconClass="main-nav__upload-icon"
