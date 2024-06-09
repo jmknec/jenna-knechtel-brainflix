@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import Search from "../Search/Search";
 import Avatar from "../Avatar/Avatar";
 import Image from "../../assets/images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
@@ -13,22 +14,12 @@ function Header(props) {
           <img
             className="header__logo"
             src="src/assets/logos/BrainFlix-logo.svg"
-            alt="BrainFlix logo white play button blue background"
+            alt="white play symbol on blue background"
           ></img>
         </Link>
         <div className="main-nav">
           <div className="main-nav__site">
-            <search className="main-nav__search">
-              <form className="main-nav__form" action="./search">
-                <input
-                  className="main-nav__input"
-                  type="search"
-                  name="search-field"
-                  id="search"
-                  placeholder="Search"
-                />
-              </form>
-            </search>
+            <Search />
             <Avatar
               className="main-nav__avatar main-nav__avatar--mobile"
               image={Image}
