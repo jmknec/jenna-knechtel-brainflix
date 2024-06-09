@@ -37,4 +37,9 @@
       max-width: 100%;
     }
   }
+
+  &__link {
+    text-decoration: none;
+    color: $brainflix-black;
+  }
 }

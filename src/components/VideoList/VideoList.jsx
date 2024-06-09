@@ -1,11 +1,9 @@
-import { Link, useParams } from "react-router-dom";
-// import videos from "../../data/video-details.json";
+import { Link } from "react-router-dom";
 import "./VideoList.scss";
 import Video from "../Video/Video";
 
 function VideoList(props) {
   const { videosList, currentVideo, setCurrentVideo } = props;
-  // const { id } = useParams();
 
   return (
     <aside className="video-list">
@@ -17,7 +15,11 @@ function VideoList(props) {
           })
           .map((video) => {
             return (
-              <Link to={`/${video.id}`} key={video.id}>
+              <Link
+                className="video-list__link"
+                to={`/${video.id}`}
+                key={video.id}
+              >
                 <Video
                   video={video}
                   title={video.title}

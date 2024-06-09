@@ -93,6 +93,10 @@
     @extend .main-nav__site;
   }
 
+  &__link {
+    width: 100%;
+  }
+
   &__upload-icon {
     position: absolute;
     left: 0.75rem;

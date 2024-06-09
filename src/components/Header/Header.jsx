@@ -36,7 +36,7 @@ function Header(props) {
             />
           </div>
           <div className="main-nav__user">
-            <Link to={"/upload"}>
+            <Link className="main-nav__link" to={"/upload"}>
               <Button
                 className="main-nav__upload"
                 btnLabel="Upload"
