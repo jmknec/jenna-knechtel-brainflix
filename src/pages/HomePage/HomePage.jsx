@@ -7,8 +7,7 @@ import MainSection from "../../components/MainSection/MainSection";
 import VideoList from "../../components/VideoList/VideoList";
 
 function HomePage() {
-  const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-  const apiKey = "6ab3a096-a9af-4480-80df-8f33eec68532";
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   const [videosList, setVideosList] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
@@ -17,9 +16,7 @@ function HomePage() {
 
   const fetchVideos = async () => {
     try {
-      const videosResponse = await axios.get(
-        `${baseUrl}videos?api_key=${apiKey}`
-      );
+      const videosResponse = await axios.get(`${baseUrl}/videos`);
       navigate(`/${videosResponse.data[0].id}`);
     } catch (error) {
       console.error(error);
@@ -28,12 +25,8 @@ function HomePage() {
 
   const fetchVideoDetails = async () => {
     try {
-      const detailsResponse = await axios.get(
-        `${baseUrl}videos/${id}?api_key=${apiKey}`
-      );
-      const allVideosResponse = await axios.get(
-        `${baseUrl}videos?api_key=${apiKey}`
-      );
+      const detailsResponse = await axios.get(`${baseUrl}/videos/${id}`);
+      const allVideosResponse = await axios.get(`${baseUrl}/videos`);
       setCurrentVideo(detailsResponse.data);
       setVideosList(allVideosResponse.data);
     } catch (error) {
