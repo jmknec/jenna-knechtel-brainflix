@@ -1,6 +1,6 @@
 import "./TextInput.scss";
 
-function TextInput({ name, id, className, placeholder }) {
+function TextInput({ name, id, className, placeholder, onChange, value }) {
   return (
     <>
       <textarea
@@ -8,6 +8,8 @@ function TextInput({ name, id, className, placeholder }) {
         id={id}
         name={name}
         placeholder={placeholder}
+        onChange={onChange}
+        value={value}
       ></textarea>
     </>
   );

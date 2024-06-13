@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./UploadForm.scss";
 import TextInput from "../TextInput/TextInput";
@@ -5,7 +6,20 @@ import Button from "../../components/Button/Button";
 import Publish from "../../assets/icons/publish.svg";
 
 function UploadForm() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const navigate = useNavigate();
+
+  const handleTitleChange = (e) => {
+    console.log(title);
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    console.log(description);
+    setDescription(e.target.value);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     alert(
@@ -30,6 +44,8 @@ function UploadForm() {
               name="title-input"
               type="text"
               placeholder="Add a title to your video"
+              onChange={handleTitleChange}
+              value={title}
             />
           </div>
           <div className="upload-form__input-container">
@@ -41,6 +57,8 @@ function UploadForm() {
               id="description"
               name="description-input"
               placeholder="Add a description to your video"
+              onChange={handleDescriptionChange}
+              value={description}
             />
           </div>
         </div>
