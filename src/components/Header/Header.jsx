@@ -22,7 +22,7 @@ function Header(props) {
             <Avatar
               className="main-nav__avatar main-nav__avatar--mobile"
               image="http://localhost:8080/images/Mohan-muruge.jpg"
-              alt="Side profile of default user Mohan Muruge"
+              altText="Side profile of default user Mohan Muruge"
             />
           </div>
           <div className="main-nav__user">
@@ -38,7 +38,7 @@ function Header(props) {
             <Avatar
               className="main-nav__avatar main-nav__avatar--tablet"
               image="http://localhost:8080/images/Mohan-muruge.jpg"
-              alt="Side profile of default user Mohan Muruge"
+              altText="Side profile of default user Mohan Muruge"
             />
           </div>
         </div>

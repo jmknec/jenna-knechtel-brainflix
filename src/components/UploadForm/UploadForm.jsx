@@ -81,6 +81,7 @@ function UploadForm() {
             icon={Publish}
             iconClass="upload__publish-icon"
             type="submit"
+            altText="Up arrow above horizontal line"
           />
           <Link className="upload__nav-link" to="/">
             <h2 className="upload__cancel">Cancel</h2>

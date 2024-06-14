@@ -10,6 +10,7 @@ function CommentForm() {
         <Avatar
           className="comment-form__avatar"
           image="http://localhost:8080/images/Mohan-muruge.jpg"
+          altText="Side profile of default user Mohan Muruge"
         />
       </div>
       <div className="comment-form__content">
