@@ -32,7 +32,7 @@ function UploadForm() {
   const submitHandler = (e) => {
     e.preventDefault();
     const formData = { title, description };
-    // console.log(formData);
+
     sendVideoObj(formData);
     alert(
       "Your video has been uploaded! You will now be redirected to the Home Page."

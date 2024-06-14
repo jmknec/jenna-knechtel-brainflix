@@ -25,6 +25,7 @@ function VideoList(props) {
                   title={video.title}
                   channel={video.channel}
                   image={video.image}
+                  alt={video.alt}
                   setCurrentVideo={setCurrentVideo}
                 />
               </Link>

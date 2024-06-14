@@ -2,7 +2,6 @@ import "./CommentForm.scss";
 import Avatar from "../Avatar/Avatar";
 import TextInput from "../TextInput/TextInput";
 import Button from "../Button/Button";
-import Image from "../../assets/images/Mohan-muruge.jpg";
 
 function CommentForm() {
   return (
@@ -10,8 +9,7 @@ function CommentForm() {
       <div className="comment-form__avatar-container">
         <Avatar
           className="comment-form__avatar"
-          image={Image}
-          alt="User profile picture"
+          image="http://localhost:8080/images/Mohan-muruge.jpg"
         />
       </div>
       <div className="comment-form__content">
@@ -31,7 +29,7 @@ function CommentForm() {
           btnLabel="Comment"
           icon="src/assets/icons/add_comment.svg"
           iconClass="comment-form__icon"
-          altText="blue addition sign on white text bubble"
+          altText="Blue addition sign on white text bubble"
         />
       </div>
     </form>

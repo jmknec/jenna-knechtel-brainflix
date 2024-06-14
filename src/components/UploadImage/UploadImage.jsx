@@ -8,7 +8,7 @@ function UploadImage() {
         <img
           className="upload__image"
           src="http://localhost:8080/images/image9.jpg"
-          alt="Lower body of relay runner in starting position"
+          alt="Two smiling drag queens"
         />
       </div>
     </>
