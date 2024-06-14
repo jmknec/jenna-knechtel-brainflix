@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./UploadForm.scss";
 import TextInput from "../TextInput/TextInput";
 import Button from "../../components/Button/Button";
@@ -8,7 +9,7 @@ import Publish from "../../assets/icons/publish.svg";
 function UploadForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  // const [formData, setFormData] = useState(null);
+  const baseUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const handleTitleChange = (e) => {
@@ -19,10 +20,20 @@ function UploadForm() {
     setDescription(e.target.value);
   };
 
+  const sendVideoObj = async (videoObj) => {
+    try {
+      const sendResponse = await axios.post(`${baseUrl}/videos`, videoObj);
+      return sendResponse;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     const formData = { title, description };
-    console.log(formData);
+    // console.log(formData);
+    sendVideoObj(formData);
     alert(
       "Your video has been uploaded! You will now be redirected to the Home Page."
     );
