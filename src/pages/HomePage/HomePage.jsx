@@ -17,6 +17,7 @@ function HomePage() {
   const fetchVideos = async () => {
     try {
       const videosResponse = await axios.get(`${baseUrl}/videos`);
+      setVideosList(videosResponse.data);
       navigate(`/${videosResponse.data[0].id}`);
     } catch (error) {
       console.error(error);
@@ -26,20 +27,22 @@ function HomePage() {
   const fetchVideoDetails = async () => {
     try {
       const detailsResponse = await axios.get(`${baseUrl}/videos/${id}`);
-      const allVideosResponse = await axios.get(`${baseUrl}/videos`);
       setCurrentVideo(detailsResponse.data);
-      setVideosList(allVideosResponse.data);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
+    fetchVideos();
+  }, []);
+
+  useEffect(() => {
     if (id) {
       fetchVideoDetails();
       return;
     }
-    fetchVideos();
+    return;
   }, [id]);
 
   if (!currentVideo) {

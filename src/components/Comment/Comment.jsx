@@ -7,10 +7,7 @@ function Comment(props) {
 
   return (
     <div className="comment">
-      <Avatar
-        className="comment__avatar"
-        altText="Side profile of comment author"
-      />
+      <Avatar className="comment__avatar" />
       <div className="comment__content">
         <div className="comment__identifiers">
           <h3 className="comment__username">{name}</h3>
