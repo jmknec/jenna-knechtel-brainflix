@@ -8,20 +8,21 @@ import Publish from "../../assets/icons/publish.svg";
 function UploadForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  // const [formData, setFormData] = useState(null);
   const navigate = useNavigate();
 
   const handleTitleChange = (e) => {
-    console.log(title);
     setTitle(e.target.value);
   };
 
   const handleDescriptionChange = (e) => {
-    console.log(description);
     setDescription(e.target.value);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const formData = { title, description };
+    console.log(formData);
     alert(
       "Your video has been uploaded! You will now be redirected to the Home Page."
     );
