@@ -7,9 +7,10 @@ import Button from "../../components/Button/Button";
 import Publish from "../../assets/icons/publish.svg";
 
 function UploadForm() {
+  const baseUrl = import.meta.env.VITE_API_URL;
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const baseUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const handleTitleChange = (e) => {
